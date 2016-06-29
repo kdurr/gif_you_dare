@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'r-gifs',
+    modulePrefix: 'gif-you-dare',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

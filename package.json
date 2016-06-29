@@ -1,7 +1,7 @@
 {
-  "name": "r-gifs",
+  "name": "gif-you-dare",
   "version": "0.0.0",
-  "description": "Small description for r-gifs goes here",
+  "description": "Small description for gif-you-dare goes here",
   "private": true,
   "directories": {
     "doc": "doc",
