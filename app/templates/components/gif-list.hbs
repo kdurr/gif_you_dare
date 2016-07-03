@@ -1,15 +1,10 @@
 <div class="jumbo">
-  {{#each gifs as |gif|}}
+  {{#each gifsList as |gif|}}
     <article class='img container'>
-      <h2>{{gif.title}}</h2>
+      <h2>{{gif.data.title}}</h2>
       <div class='gif img'>
-        <img class='gif' src="{{gif.image}}">
+        <img class='gif' src="{{gif.data.url}}">
       </div>
-      {{!-- some kind of click and copy image url --}}
     </article>
   {{/each}}
-
-  {{#link-to 'index' class="button"}}
-    Home
-  {{/link-to}}
 </div>
