@@ -6,8 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('new');
-  this.route('popular');
+  this.route('gif', { path: 'r/:subreddit' });
 });
 
 export default Router;
