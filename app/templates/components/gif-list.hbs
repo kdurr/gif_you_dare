@@ -2,8 +2,13 @@
   {{#each gifsList as |gif|}}
     <article class='img container'>
       <h2>{{gif.data.title}}</h2>
-      <div class='gif img'>
-        <img class='gif' src="{{gif.data.url}}">
+      <div class='gif media'>
+        {{!-- <img class='gif' src="{{gif.data.url}}"> --}}
+        {{!-- {{#if /gifv/.test(gif.data.url)}} --}}
+        <iframe class="imgur-embed" width="100%" height="325" frameborder="1" src="{{gif.data.url}}#embed"></iframe>
+        {{!-- {{else}}
+          <img class='gif' src="{{gif.data.url}}">
+        {{/if}} --}}
       </div>
     </article>
   {{/each}}
