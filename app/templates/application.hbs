@@ -1,2 +1,23 @@
-<h2 id='title'>GIF YOU DARE</h2>
-{{outlet}}
+<div class='ui grid fluid container'>
+  <div class='sidebar context'>
+    {{#ui-sidebar inverted vertical menu ui_context=".sidebar.context"}}
+      <img class='ham-menu' src="assets/images/hamburger-menu-white.svg">
+      <h2>SUBREDDITS:</h2>
+      {{#link-to 'gif' 'gifs'}}Gifs{{/link-to}}<br>
+      {{#link-to 'gif' 'reactiongifs'}}Reaction Gifs{{/link-to}}<br>
+      {{#link-to 'gif' 'endlessgifs'}}Endless Gifs{{/link-to}}<br>
+      {{#link-to 'gif' 'puppygifs'}}Puppy Gifs{{/link-to}}<br>
+      {{#link-to 'gif' 'catgifs'}}Cat Gifs{{/link-to}}<br>
+      {{#link-to 'gif' 'gifrecipes'}}Gif Recipes{{/link-to}}<br>
+      {{#link-to 'gif' 'combinedgifs'}}Combined Gifs{{/link-to}}<br>
+    {{/ui-sidebar}}
+
+    <div class='pusher'>
+      <div class='nav-bar'>
+        <img class='ham-menu pink-menu' src="assets/images/hamburger-menu-pink.svg" {{action "toggle"}}>
+        <h2 id='site-title'>GIF <span class='pinkify-title'>YOU DARE</span></h2>
+      </div>
+      {{outlet}}
+    </div>
+  </div>
+</div>

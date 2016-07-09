@@ -1,0 +1,15 @@
+<div class="jumbo">
+  {{#each gifsList as |gif|}}
+    <article class='img container'>
+      <div class='gif media'>
+        {{!-- <img class='gif' src="{{gif.data.url}}"> --}}
+        {{!-- {{#if /gifv/.test(gif.data.url)}} --}}
+        <iframe class="imgur-embed" width="100%" height="325" frameborder="1" src="{{gif.data.url}}#embed"></iframe>
+        {{!-- {{else}}
+          <img class='gif' src="{{gif.data.url}}">
+        {{/if}} --}}
+      </div>
+      <h2>{{gif.data.title}}</h2>
+    </article>
+  {{/each}}
+</div>
