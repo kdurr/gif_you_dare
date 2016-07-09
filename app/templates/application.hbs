@@ -1,15 +1,31 @@
 <div class='ui grid fluid container'>
   <div class='sidebar context'>
     {{#ui-sidebar inverted vertical menu ui_context=".sidebar.context"}}
-      <img class='ham-menu' src="assets/images/hamburger-menu-white.svg">
-      <h2>SUBREDDITS:</h2>
-      {{#link-to 'gif' 'gifs'}}Gifs{{/link-to}}<br>
-      {{#link-to 'gif' 'reactiongifs'}}Reaction Gifs{{/link-to}}<br>
-      {{#link-to 'gif' 'endlessgifs'}}Endless Gifs{{/link-to}}<br>
-      {{#link-to 'gif' 'puppygifs'}}Puppy Gifs{{/link-to}}<br>
-      {{#link-to 'gif' 'catgifs'}}Cat Gifs{{/link-to}}<br>
-      {{#link-to 'gif' 'gifrecipes'}}Gif Recipes{{/link-to}}<br>
-      {{#link-to 'gif' 'combinedgifs'}}Combined Gifs{{/link-to}}<br>
+      <img class='ham-menu white-menu' src="assets/images/hamburger-menu-white.svg">
+      <h2 class='sidebar-title'>SUBREDDITS:</h2>
+      <ul class='list-items'>
+        <li class='list-item'>
+          {{#link-to 'gif' 'gifs'}}Gifs{{/link-to}}<br>
+        </li>
+        <li class='list-item'>
+          {{#link-to 'gif' 'reactiongifs'}}Reaction Gifs{{/link-to}}<br>
+        </li>
+        <li class='list-item'>
+          {{#link-to 'gif' 'endlessgifs'}}Endless Gifs{{/link-to}}<br>
+        </li>
+        <li class='list-item'>
+          {{#link-to 'gif' 'puppygifs'}}Puppy Gifs{{/link-to}}<br>
+        </li>
+        <li class='list-item'>
+          {{#link-to 'gif' 'catgifs'}}Cat Gifs{{/link-to}}<br>
+        </li>
+        <li class='list-item'>
+          {{#link-to 'gif' 'gifrecipes'}}Gif Recipes{{/link-to}}<br>
+        </li>
+        <li class='list-item'>
+          {{#link-to 'gif' 'combinedgifs'}}Combined Gifs{{/link-to}}<br>
+        </li>
+      </ul>
     {{/ui-sidebar}}
 
     <div class='pusher'>

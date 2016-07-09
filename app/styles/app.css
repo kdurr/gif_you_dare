@@ -18,7 +18,26 @@ h2 {
   color: #FF7775;
 }
 
-.ham-menu {
+.ham-menu.white-menu {
+  margin: 1.5em 0 0 0;
+  padding: 1em 0 1em 0;
+}
+
+.sidebar-title {
+  margin: .5em 0 .5em 0;
+}
+
+.list-items {
+  padding: 0;
+}
+
+.list-item {
+  font-size: 1.25em;
+  list-style-type: none;
+  padding: .5em 0 .5em 0;
+}
+
+.ham-menu.pink-menu {
   display: inline-block;
   margin: 1.5em 0;
   padding: .5em;
