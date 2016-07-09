@@ -58,3 +58,8 @@ h2 {
 .pusher {
   height: 100%;
 }
+
+.gif-container {
+  height: 100%;
+  margin: 0;
+}

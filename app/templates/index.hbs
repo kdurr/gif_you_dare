@@ -1,0 +1,12 @@
+<div class="jumbo">
+  {{#each images as |gif|}}
+      {{#if gif.data}}
+        <article class='img container'>
+          <div class='gif media'>
+            <img class='gif' src="{{gif.data.url}}">
+          </div>
+          <h2>{{gif.data.title}}</h2>
+        </article>
+      {{/if}}
+  {{/each}}
+</div>
