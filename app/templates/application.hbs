@@ -3,7 +3,7 @@
     {{#ui-sidebar inverted vertical menu ui_context=".sidebar.context"}}
       <img class='ham-menu white-menu' src="assets/images/hamburger-menu-white.svg">
       <h2 class='sidebar-title'>SUBREDDITS:</h2>
-      <ul class='list-items'>
+      <ul class='list-items' {{action 'closeSidebar'}}>
         <li class='list-item'>
           {{#link-to 'gif' 'gifs'}}Gifs{{/link-to}}<br>
         </li>
