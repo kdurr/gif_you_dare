@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
       $('.ui.sidebar').sidebar('toggle');
     },
     closeSidebar: function() {
+      this.send('refreshGifs');
       $('.list-item').on('click', function() {
         $('.ui.sidebar').sidebar('toggle');
       });
