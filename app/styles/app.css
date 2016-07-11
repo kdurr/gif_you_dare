@@ -18,15 +18,11 @@ html * {
 
 body {
   background-color: #000000;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
 }
 
 .pinkify-title {
@@ -61,7 +57,6 @@ p {
 
 #site-title {
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
   font-size: 2.75em;
 }
 
