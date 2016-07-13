@@ -21,6 +21,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.ember-view.sidebar {
+  background-color: #FF7775;
+}
+
 h2 {
   color: #ffffff;
 }
