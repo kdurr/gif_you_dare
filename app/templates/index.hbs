@@ -1,12 +1,11 @@
 <div class="jumbo">
-  {{#each images as |gif|}}
-      {{#if gif.data}}
-        <article class='img container'>
-          <div class='gif media'>
-            <img class='gif' src="{{gif.data.url}}">
-          </div>
-          <h2>{{gif.data.title}}</h2>
-        </article>
-      {{/if}}
-  {{/each}}
+  {{#if images.firstObject.data}}
+    <article class='img container'>
+
+      <div class='gif-media' {{action "nextGif" images.firstObject}}>
+        {{isGif images.firstObject.data.url 'gif'}}
+      </div>
+      <h2 {{action "copyUrl" images.0.data.url}}>{{images.0.data.title}}</h2>
+    </article>
+  {{/if}}
 </div>
