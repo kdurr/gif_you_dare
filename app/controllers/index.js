@@ -15,20 +15,23 @@ export default Ember.Controller.extend({
       }
     });
 
+    this.set('model', gifList);
     return gifList;
   },
-  images: function() {
-    return this.gifsList();
-  }.property('model.data.children.[]'),
+  index: 0,
+  currentGif: function() {
+    if (this.get('index') === 0) { this.gifsList() };
+    return this.get('model.').objectAt(this.get('index'));
+  }.property('index'),
 
   actions: {
     nextGif: function(gif) {
-      let gifs = this.gifsList(),
+      let gifs = this.get('model'),
           index = gifs.indexOf(gif) + 1;
-      // debugger;
+
       if (index >= 0 && index <= gifs.get('length') - 1) {
-        // return this.transitionToRoute('gif', gifs.objectAt(index))
-        return gifs.objectAt(index);
+        this.incrementProperty('index');
+        console.log('index' + this.get('index'));
       }
     },
     copyUrl: function(url) {
