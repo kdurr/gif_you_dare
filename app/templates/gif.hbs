@@ -1,14 +1,11 @@
-{{!-- <div class="jumbo">
+<div class="jumbo">
+  {{#if currentGif.data}}
+    <article class='img container'>
 
-  {{#each images as |gif|}}
-      {{#if gif.data}}
-        <article class='img container'>
-          <div class='gif media'>
-            {{isGif gif.data.url 'gif'}}
-          </div>
-
-          <h2>{{gif.data.title}}</h2>
-        </article>
-      {{/if}}
-  {{/each}}
-</div> --}}
+      <div class='gif-media' {{action "nextGif" currentGif}}>
+        {{isGif currentGif.data.url 'gif'}}
+      </div>
+      <h2 {{action "copyUrl" currentGif.data.url}}>{{currentGif.data.title}}</h2>
+    </article>
+  {{/if}}
+</div>
