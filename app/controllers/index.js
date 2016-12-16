@@ -31,7 +31,6 @@ export default Ember.Controller.extend({
 
       if (index >= 0 && index <= gifs.get('length') - 1) {
         this.incrementProperty('index');
-        console.log('index' + this.get('index'));
       }
     },
     copyUrl: function(url) {
