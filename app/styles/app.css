@@ -78,5 +78,22 @@ h2 {
 }
 
 .gif-media {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 75vh;
+  text-align: center;
+}
+
+.gif {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 75vh;
+}
+
+.gif-title {
+  height: auto;
+  text-align: center;
   width: 100%;
 }

@@ -1,11 +1,8 @@
 <div class="jumbo">
   {{#if currentGif.data}}
-    <article class='img container'>
-
-      <div class='gif-media' {{action "nextGif" currentGif}}>
-        {{isGif currentGif.data.url 'gif'}}
-      </div>
-      <h2 {{action "copyUrl" currentGif.data.url}}>{{currentGif.data.title}}</h2>
-    </article>
+    <div class='gif-media' {{action "nextGif" currentGif}}>
+      {{isGif currentGif.data.url 'gif'}}
+    </div>
+    <h2 class='gif-title' {{action "copyUrl" currentGif.data.url}}>{{currentGif.data.title}}</h2>
   {{/if}}
 </div>
