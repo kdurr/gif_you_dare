@@ -3,7 +3,8 @@ import Ember from 'ember';
 export function isGif(params) {
   if (/\.gif$/.test(params[0])) {
     return Ember.String.htmlSafe(`<img class='gif' src=${params[0]}>`);
-    // return Ember.String.htmlSafe(`<img class='gif' src=${params[0]} onload='displayGif(this)' style='display: none;'>`);
+  } else if (/\.gifv$/.test(params[0])) {
+    return Ember.String.htmlSafe(`<video class='gif'><source src='${params[0]}' type='video/webm'></video>`);
   } else {
     if (/gfycat/.test(params[0])) {
       let gfyRegexp = /(?:gfycat\.com\/)([a-zA-Z0-9]+)/,
@@ -12,7 +13,7 @@ export function isGif(params) {
 
       return Ember.String.htmlSafe(`<img class='gif' src=${gfyCatUrl}>`);
     } else {
-      return Ember.String.htmlSafe(`<video autoplay loop class="embeded-video"><source src=${params[0]} type="video/mp4"></video>`);
+      return Ember.String.htmlSafe(`<video autoplay loop class='embeded-video gif'><source src=${params[0]} type='video/mp4'></video>`);
     }
   }
 }

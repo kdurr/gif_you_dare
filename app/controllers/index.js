@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
       }
 
       if (/\.gifv$/.test(gif.data.url)) {
-        selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.gif');
+        selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.mp4');
       }
     });
 
