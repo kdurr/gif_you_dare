@@ -13,6 +13,10 @@ export default Ember.Controller.extend({
       if (/\.gifv$/.test(gif.data.url)) {
         selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.mp4');
       }
+
+      if (gif.data.preview === undefined) {
+        selfArray[index].data.url = '';
+      }
     });
 
     this.set('model', gifList);

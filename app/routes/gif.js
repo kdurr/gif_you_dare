@@ -10,7 +10,7 @@ export default Ember.Route.extend({
       subredditPath = params.subreddit;
     }
 
-    let url = "https://www.reddit.com/r/" + subredditPath + "/top.json?sort=new&limit=100";
+    let url = "https://www.reddit.com/r/" + subredditPath + ".json?sort=new&limit=100";
     return Ember.$.getJSON(url);
   },
   actions: {
