@@ -7,12 +7,13 @@ export default Ember.Controller.extend({
 
     gifList.forEach(function(gif, index, selfArray) {
       if (/whale/.test(gif.data.title) || /whale/.test(gif.data.url) || /nsfw/.test(gif.data.thumbnail)) {
-        selfArray[index].data.url = '';
+        selfArray.splice(index, 1);
       }
 
       if (/\.gifv$/.test(gif.data.url)) {
         selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.mp4');
       }
+
     });
 
     this.set('model', gifList);

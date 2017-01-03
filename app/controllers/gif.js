@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 
     gifList.forEach(function(gif, index, selfArray) {
       if (/whale/.test(gif.data.title) || /whale/.test(gif.data.url) || /nsfw/.test(gif.data.thumbnail)) {
-        selfArray[index].data.url = '';
+        selfArray.splice(index, 1);
       }
 
       if (/\.gifv$/.test(gif.data.url)) {
@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
       }
 
       if (gif.data.preview === undefined) {
-        selfArray[index].data.url = '';
+        selfArray.splice(index, 1);
       }
     });
 
