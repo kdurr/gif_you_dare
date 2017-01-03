@@ -13,7 +13,6 @@ html * {
 
 .container {
   height: 100%;
-  margin: 0 0 0 1em;
 }
 
 body {
@@ -38,8 +37,16 @@ h2 {
   padding: 1em 0 1em 0;
 }
 
+.sidebar {
+  height: 100vh;
+}
+
 .sidebar-title {
   margin: .5em 0 .5em 0;
+}
+
+.sidebar-alignment {
+  margin-left: 1em;
 }
 
 .list-items {
@@ -70,11 +77,11 @@ h2 {
 
 .pusher {
   height: 100%;
+  margin: 0 0 0 1em;
 }
 
 .gif-container {
   height: 100%;
-  margin: 0;
 }
 
 .gif-media {
