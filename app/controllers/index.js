@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         selfArray.splice(index, 1);
       }
 
-      if (/\.gifv$/.test(gif.data.url)) {
+      if (/\.gifv$/.test(gif.data.url) && selfArray[index] != undefined) {
         selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.mp4');
       }
 
