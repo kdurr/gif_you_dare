@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
   },
   index: 0,
   currentGif: function() {
-    if (this.get('index') === 0) { this.gifsList() };
+    if (this.get('index') === 0) { this.gifsList(); }
     return this.get('model.').objectAt(this.get('index'));
   }.property('index'),
 

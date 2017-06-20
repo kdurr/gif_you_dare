@@ -8,11 +8,11 @@ export function isGif(params) {
   } else if (/gfycat/.test(params[0])) {
     let gfyRegexp = /(?:gfycat\.com\/)([a-zA-Z0-9]+)/,
         gfyCatKey = gfyRegexp.exec(params[0])[1],
-        gfyCatUrl = 'http://giant.gfycat.com/' + gfyCatKey + '.gif'
+        gfyCatUrl = 'http://giant.gfycat.com/' + gfyCatKey + '.gif';
 
     return Ember.String.htmlSafe(`<img class='gif' src=${gfyCatUrl}>`);
   } else {
-    return Ember.String.htmlSafe(`<div class='gif'><h1>Sorry, nothing found :(</h1></div>`)
+    return Ember.String.htmlSafe(`<div class='gif'><h1>Sorry, nothing found :(</h1></div>`);
   }
 }
 

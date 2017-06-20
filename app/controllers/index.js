@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         selfArray.splice(index, 1);
       }
 
-      if (/\.gifv$/.test(gif.data.url) && selfArray[index] != undefined) {
+      if (/\.gifv$/.test(gif.data.url) && selfArray[index] !== undefined) {
         selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.mp4');
       }
 
@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
   },
   index: 0,
   currentGif: function() {
-    if (this.get('index') === 0) { this.gifsList() };
+    if (this.get('index') === 0) { this.gifsList(); }
     return this.get('model.').objectAt(this.get('index'));
   }.property('index'),
 
