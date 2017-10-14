@@ -119,3 +119,7 @@ button.gif-copy {
   text-align: center;
   width: 100%;
 }
+
+.no-gif {
+  height: 200px;
+}
