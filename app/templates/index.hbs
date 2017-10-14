@@ -2,5 +2,8 @@
   <div class='gif-media' {{action "nextGif" currentGif}}>
     {{is-gif currentGif.data.url 'gif'}}
   </div>
-  <h2 class='gif-title' {{action "copyUrl" currentGif.data.url}}>{{currentGif.data.title}}</h2>
+  <h2 class='gif-title'>{{currentGif.data.title}}</h2>
+  <button type='button' class='gif-copy' {{action "copyUrl" currentGif.data.url}}>
+    Copy URL to Clipboard
+  </button>
 {{/if}}
