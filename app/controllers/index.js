@@ -35,8 +35,28 @@ export default Ember.Controller.extend({
       }
     },
     copyUrl: function(url) {
-      // TINA NOTE: copy url: https://www.sitepoint.com/javascript-copy-to-clipboard/
-      // debugger;
+      // Source: https://codepen.io/shaikmaqsood/pen/XmydxJ/
+      var $temp = $('<input>');
+      $('body').append($temp);
+      $temp.val(url).select();
+      document.execCommand('copy');
+      $temp.remove();
+
+      // Create and show popup
+      var popupClass = 'gif-copy-popup';
+      var popupSelector = `.${popupClass}`;
+      if ($(popupSelector).length === 0) {
+        var popup = $('<h2>Copied!</h2>');
+        popup.addClass(popupClass);
+        $(event.target).parent().append(popup);
+
+        // Fade out and remove popup
+        setTimeout(function() {
+          $(popupSelector).fadeOut('slow', function() {
+            $(this).remove();
+          });
+        }, 800);
+      }
     }
   }
 });
