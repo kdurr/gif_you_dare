@@ -120,6 +120,23 @@ button.gif-copy {
   width: 100%;
 }
 
+.iframe {
+  left: 0;
+  max-height: 75vh;
+  max-width: 100%;
+  position: absolute;
+}
+
+.iframe-click {
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
 .no-gif {
   height: 200px;
 }

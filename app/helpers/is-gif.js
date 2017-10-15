@@ -12,8 +12,8 @@ export function isGif(params) {
     return Ember.String.htmlSafe(`
       <div>
         <div style='position:relative;padding-bottom:57%''>
-          <iframe src='https://gfycat.com/ifr/${gfyCatKey}' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe>
-          <a href='#' class='gif' style="position:absolute; top:0; left:0; display:inline-block; width:100%; height:100%; z-index:5;"></a>
+          <iframe src='https://gfycat.com/ifr/${gfyCatKey}' frameborder='0' scrolling='no' width='100%' height='100%' class='iframe'></iframe>
+          <a href='#' class='gif iframe-click'></a>
         </div>
       </div>`);
   } else {
