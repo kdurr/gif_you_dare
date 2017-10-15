@@ -14,6 +14,10 @@ export default Ember.Controller.extend({
         selfArray[index].data.url = gif.data.url.replace(new RegExp("\.gifv$", 'igm'), '.mp4');
       }
 
+      if (/v\.redd\.it/.test(gif.data.url)) {
+        selfArray[index].data.url = gif.data.media.reddit_video.fallback_url;
+      }
+
     });
 
     this.set('model', gifList);

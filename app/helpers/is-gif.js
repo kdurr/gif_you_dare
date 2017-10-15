@@ -16,6 +16,8 @@ export function isGif(params) {
           <a href='#' class='gif iframe-click'></a>
         </div>
       </div>`);
+  } else if (/DASH/.test(params[0])) {
+    return Ember.String.htmlSafe(`<video data-dashjs-player autoplay class='gif' src=${params[0]}></video>`);
   } else {
     return Ember.String.htmlSafe(`<div class='gif'><h1 class='no-gif'>Sorry, this one isn't supported yet!</h1></div>`);
   }
